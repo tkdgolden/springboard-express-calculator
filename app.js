@@ -144,10 +144,13 @@ app.use(function (err, req, res, next) { //Note the 4 parameters!
     return res.status(status).send(`${status} error: ${message}`);
 });
 
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
-});
+// app.listen(3000, () => {
+//     console.log("Server running on port 3000");
+// });
 
-
-
-
+module.exports = {
+    validate: validate,
+    getMean: getMean,
+    getMedian: getMedian,
+    getMode: getMode
+}
